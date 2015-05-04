@@ -1,0 +1,32 @@
+extends layout
+
+block content
+	.row-fluid
+		.span12.well(style='height: 85vh;' align="center")
+			h2 Predicted Song
+			<iframe style='height: 70vh;' title="YouTube video player" class="youtube-player" type="text/html" src="http://www.youtube.com/embed/#{roomid}?rel=0&amp;wmode=opaque" frameborder="0" allowFullScreen="true" width="638" height="457"></iframe>
+
+			h1(style='margin: 70px 0 10px 0;color:white;font-size: 200%') 
+				a(href="/page2") Refresh
+
+		
+	#myModal.modal.hide.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+		.modal-header
+			button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+			h3#myModalLabel Modal header
+		.modal-body
+			p One fine body…
+		.modal-footer
+			button.btn(data-dismiss='modal', aria-hidden='true') Close
+			button.btn.btn-primary Save changes
+
+		script(type="text/javascript", src="js/index1.js")
+		script(type='text/javascript', src='/js/chardinjs.min.js', charset='utf-8')
+		link(rel="stylesheet", type="text/css", href="/stylesheets/chardinjs.css")
+		script(type='text/javascript', src='/js/humane.min.js')
+		link(rel="stylesheet", type="text/css", href="/stylesheets/flatty.css")
+	
+	hr(style='margin: 30px 0 10px 0;')
+	div.row-fluid
+		.span12.footer.pull-left(align="center")
+			a(id="foot" href="http://www.shanjitsingh.in" target="_blank") Made with <3 by JSP at Detkin.
